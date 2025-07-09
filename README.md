@@ -38,7 +38,7 @@ You can refer to cityscapes and ACDC's official websites for the datasets. For G
 
 for synthetic data generation:
 ```
-source img_gen/run.sh <data_root>
+source img_gen/run.sh <data_root> snow
 ```
 
 for progress model adaptation:

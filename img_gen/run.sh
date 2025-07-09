@@ -1,23 +1,23 @@
 data_root="$1"
-setting="snow"
+setting="$2"
 # source img_gen/run.sh /data/shared/luojun
 
 # if you have more than 1 gpu, you can specify their ids in the `gpu_ids` argument
-# python multigpu.py \
-#     --gpu_ids "0" \
-#     --type intermediate \
-#     --setting "$setting" \
-#     --image_root "${data_root}/cityscapes/leftImg8bit/train" \
-#     --label_root "${data_root}/cityscapes/gtFine/train" \
-#     --target_root "${data_root}/${setting}_intermediate"
+python multigpu.py \
+    --gpu_ids "0" \
+    --type intermediate \
+    --setting "$setting" \
+    --image_root "${data_root}/cityscapes/leftImg8bit/train" \
+    --label_root "${data_root}/cityscapes/gtFine/train" \
+    --target_root "${data_root}/${setting}_intermediate"
 
-# python multigpu.py \
-#     --gpu_ids "0" \
-#     --type target \
-#     --setting "$setting" \
-#     --image_root "${data_root}/cityscapes/leftImg8bit/train" \
-#     --label_root "${data_root}/cityscapes/gtFine/train" \
-#     --target_root "${data_root}/${setting}_target"
+python multigpu.py \
+    --gpu_ids "0" \
+    --type target \
+    --setting "$setting" \
+    --image_root "${data_root}/cityscapes/leftImg8bit/train" \
+    --label_root "${data_root}/cityscapes/gtFine/train" \
+    --target_root "${data_root}/${setting}_target"
 
 
 target_types=("intermediate" "target")
