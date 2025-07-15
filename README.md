@@ -52,7 +52,7 @@ source eval.sh <data_root> <setting>
 ```
 `<setting>` can be "day", "fog", "rain", "snow", "night", "game"
 
-Unfortunately, we lost our checkpoints in the paper. Here we provide re-run results. All the results are within the margin of error. Note that even with the same seed and hyperparameters, the miou result still differ slightly (about ±0.2). See all of the training logs and the checkpoints from https://huggingface.co/roujin/SDGPA/tree/main
+We release the following results. See all logs and checkpoints during training from https://huggingface.co/roujin/SDGPA/tree/main
 
 
 | Setting          | Day→Night                                                                               | Clear→Snow                                                                             | Clear→Rain                                                                             | Clear→Fog                                                                             | Real→Game                                                                              |
