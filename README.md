@@ -52,13 +52,15 @@ source eval.sh <data_root> <setting>
 ```
 `<setting>` can be "day", "fog", "rain", "snow", "night", "game"
 
-Unfortunately, we lost our checkpoints in the paper. Here we provide re-run results. All the results are within the margin of error. Note that even with the same seed and hyperparameters, the miou result still differ slightly (about ±0.2). See the training logs and the checkpoints from https://huggingface.co/roujin/SDGPA/tree/main
+Unfortunately, we lost our checkpoints in the paper. Here we provide re-run results. All the results are within the margin of error. Note that even with the same seed and hyperparameters, the miou result still differ slightly (about ±0.2). See all of the training logs and the checkpoints from https://huggingface.co/roujin/SDGPA/tree/main
 
 
-| Setting          | Day→Night | Clear→Snow | Clear→Rain | Clear→Fog | Real→Game |
-| ---------------- | --------- | ---------- | ---------- | --------- | --------- |
-| results on paper | 26.9±0.8  | 47.4±0.7   | 48.6±0.8   | 58.8±0.7  | 43.4±0.4  |
-| our released     | 27.6      | 46.8       | 49.0       | 59.8      | 43.1      |
+| Setting          | Day→Night                                                                               | Clear→Snow                                                                             | Clear→Rain                                                                             | Clear→Fog                                                                             | Real→Game                                                                              |
+| ---------------- | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| results on paper | 26.9±0.8                                                                                | 47.4±0.7                                                                               | 48.6±0.8                                                                               | 58.8±0.7                                                                              | 43.4±0.4                                                                               |
+| our released     | 27.6                                                                                    | 46.8                                                                                   | 49.0                                                                                   | 59.8                                                                                  | 43.1                                                                                   |
+| checkpoint       | [link](https://huggingface.co/roujin/SDGPA/blob/main/night2/weights/weights_65.pth.tar) | [link](https://huggingface.co/roujin/SDGPA/blob/main/snow2/weights/weights_65.pth.tar) | [link](https://huggingface.co/roujin/SDGPA/blob/main/rain2/weights/weights_65.pth.tar) | [link](https://huggingface.co/roujin/SDGPA/blob/main/fog2/weights/weights_65.pth.tar) | [link](https://huggingface.co/roujin/SDGPA/blob/main/game2/weights/weights_65.pth.tar) |
+
 
 We recommend you to read the scripts and the paper for more details.
 
