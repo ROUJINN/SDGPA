@@ -1,14 +1,18 @@
 # SDGPA
 
-Official implementation of paper: **Zero Shot Domain Adaptive Semantic Segmentation by Synthetic Data Generation and Progressive Adaptation**.(IROS 25')
+Official implementation of paper: [**Zero Shot Domain Adaptive Semantic Segmentation by Synthetic Data Generation and Progressive Adaptation**](https://arxiv.org/abs/2508.03300).(IROS 25')
 
 by Jun Luo, Zijing Zhao, Yang Liu
+
+Abstract: 
+
+Deep learning-based semantic segmentation models achieve impressive results yet remain limited in handling distribution shifts between training and test data. In this paper, we present SDGPA (Synthetic Data Generation and Progressive Adaptation), a novel method that tackles zero-shot domain adaptive semantic segmentation, in which no target images are available, but only a text description of the target domain's style is provided. To compensate for the lack of target domain training data, we utilize a pretrained off-the-shelf text-to-image diffusion model, which generates training images by transferring source domain images to target style. Directly editing source domain images introduces noise that harms segmentation because the layout of source images cannot be precisely maintained. To address inaccurate layouts in synthetic data, we propose a method that crops the source image, edits small patches individually, and then merges them back together, which helps improve spatial precision. Recognizing the large domain gap, SDGPA constructs an augmented intermediate domain, leveraging easier adaptation subtasks to enable more stable model adaptation to the target domain. Additionally, to mitigate the impact of noise in synthetic data, we design a progressive adaptation strategy, ensuring robust learning throughout the training process. Extensive experiments demonstrate that our method achieves state-of-the-art performance in zero-shot semantic segmentation.
 
 # Installation
 
 environment setting:
 
-All of our experiments conducted on NVIDIA RTX 3090 with cuda 11.8
+All of our experiments are conducted on NVIDIA RTX 3090 with cuda 11.8
 ```
 source env.sh
 ```
@@ -34,7 +38,7 @@ Then, organize the folder as follows:
    └─ labels
 ```
 
-You can refer to cityscapes and ACDC's official websites for the datasets. For GTA5, as we only use a subset of them, we provide the following links for your convenience. https://huggingface.co/datasets/roujin/GTA5subset
+You can refer to cityscapes and ACDC's official websites for the datasets. For GTA5, as we only use a subset of them, we provide the following link to download the subset for your convenience. https://huggingface.co/datasets/roujin/GTA5subset
 
 for synthetic data generation:
 ```
@@ -81,10 +85,13 @@ We thank them for their excellent work!
 # Citation
 
 ```
-@inproceedings{luo2025sdgpa,
-  title={Zero Shot Domain Adaptive Semantic Segmentation by Synthetic Data Generation and Progressive Adaptation},
-  author={Luo, Jun and Zhao, Zijing and Liu, Yang},
-  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  organization={IEEE}
+@misc{luo2025zeroshotdomainadaptive,
+      title={Zero Shot Domain Adaptive Semantic Segmentation by Synthetic Data Generation and Progressive Adaptation}, 
+      author={Jun Luo and Zijing Zhao and Yang Liu},
+      year={2025},
+      eprint={2508.03300},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2508.03300}, 
 }
 ```
