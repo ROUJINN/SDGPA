@@ -85,7 +85,7 @@ We thank them for their excellent work!
 # Citation
 
 ```
-@misc{luo2025zeroshotdomainadaptive,
+@misc{luo2025sdgpa,
       title={Zero Shot Domain Adaptive Semantic Segmentation by Synthetic Data Generation and Progressive Adaptation}, 
       author={Jun Luo and Zijing Zhao and Yang Liu},
       year={2025},
